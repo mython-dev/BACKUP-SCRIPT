@@ -40,7 +40,7 @@ rm $BACKUP_DIR/all.sql
 
 echo "Database backup finished!"
 
-Making directory backups
+# Making directory backups
 
 echo "Start Backup DIRECTORIES"
 
