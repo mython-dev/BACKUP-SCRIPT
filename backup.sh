@@ -8,7 +8,7 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-############################### PARAMETRES ################################
+############################### PARAMETRES ###############################
 BACKUP_DATE_DIR=/home/myth/backup
 BACKUP_DIR=$BACKUP_DATE_DIR/$(date +%Y%m%d%H%M)
 DIRECTORIES="/home/myth/data /home/myth/config"
