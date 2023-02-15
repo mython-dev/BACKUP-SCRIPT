@@ -64,3 +64,28 @@ cd $BACKUP_DATE_DIR
 find ./* -type d -mtime +$DAYS_TO_STORE | xargs -r rm -R
 
 echo -e "Finished at: " $(date)"\n"
+
+
+# Backup for Postgresql 👇👇👇
+
+# DB_NAME="my_database"
+# DB_USER="postgres"
+# DB_PASS="password"
+
+## Путь до сохранения файла бэкапа
+
+
+# BACKUP_PATH="/var/backups/"
+
+## Имя файла бэкапа
+
+# BACKUP_FILE="$DB_NAME-`date +%d-%m-%Y"_"%H_%M_%S`.sql"
+
+# # Выполняем бэкап
+# pg_dump -U $DB_USER -Fc --no-acl --no-owner -h localhost $DB_NAME > $BACKUP_PATH$BACKUP_FILE
+
+## Удаляем бэкапы старше 7 дней
+
+# find $BACKUP_PATH -type f -mtime +7 -exec rm {} \;
+
+
